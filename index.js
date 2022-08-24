@@ -18,13 +18,10 @@ function mondayWork(work) {
 
 console.log(mondayWork());
 
-function wrapAdjective(symbol,emphatic) { 
-    if (symbol === "*") {
-        return `You are *${emphatic}*!`
-    } else if (symbol === "||") {
-        return `You are ${symbol}${emphatic}${symbol}!`
-    }
-}
+let wrapAdjective = function (adjective = "*") {
+  return function (highlight = "a hard worker") {
+    return `You are ${adjective}${highlight}${adjective}!`;
+  };
+};
 
-console.log(wrapAdjective("||" , "a dedicated programmer"))
-
+console.log(wrapAdjective("||", "a dedicated programmer"));
