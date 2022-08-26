@@ -17,11 +17,8 @@ function mondayWork(work) {
 }
 
 console.log(mondayWork());
-
-let wrapAdjective = function (adjective = "*") {
-  return function (highlight = "a hard worker") {
-    return `You are ${adjective}${highlight}${adjective}!`;
+let wrapAdjective = function (result = "*") {
+  return function (emphatic = "||") {
+    return `You are ${result}${emphatic}${result}!`;
   };
 };
-
-console.log(wrapAdjective("||", "a dedicated programmer"));
